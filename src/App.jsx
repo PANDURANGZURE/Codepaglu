@@ -8,21 +8,19 @@ function App() {
   );
   const [output, setOutput] = useState("");
   const [isLoading, setIsLoading] = useState(true);
+  const [isDarkMode, setIsDarkMode] = useState(false);  // <--- Dark mode state
 
   useEffect(() => {
     async function loadPy() {
       try {
         const py = await window.loadPyodide();
 
-        // JS function to receive output from Python
         function printToOutput(text) {
           setOutput((prev) => prev + text);
         }
 
-        // Expose JS print function to Python
         py.globals.set("printToOutput", printToOutput);
 
-        // Override sys.stdout and sys.stderr in Python
         await py.runPythonAsync(`
 import sys
 
@@ -39,7 +37,6 @@ sys.stdout = OutputCatcher()
 sys.stderr = OutputCatcher()
         `);
 
-        // Override input() to use window.prompt
         py.globals.set("js_prompt", (msg) => window.prompt(msg));
         await py.runPythonAsync(`
 import builtins
@@ -61,7 +58,7 @@ builtins.input = custom_input
   const runPythonCode = async () => {
     if (!pyodide) return;
 
-    setOutput(""); // Clear output before running code
+    setOutput("");
 
     try {
       const result = await pyodide.runPythonAsync(code);
@@ -74,30 +71,50 @@ builtins.input = custom_input
     }
   };
 
+  // Toggle handler for dark mode
+  const toggleDarkMode = () => {
+    setIsDarkMode((prev) => !prev);
+  };
+
   return (
-    <div className="p-6 max-w-3xl mx-auto font-sans bg-gray-50 min-h-screen">
-      <h1 className="text-3xl font-bold mb-6 text-gray-800">🧪 Python Compiler</h1>
+    <div className={`p-6 max-w-3xl mx-auto font-sans min-h-screen ${isDarkMode ? "bg-gray-900 text-gray-100" : "bg-gray-50 text-gray-800"}`}>
+      <h1 className="text-3xl font-bold mb-6">🧪 Python Compiler</h1>
+
+      <button
+        onClick={toggleDarkMode}
+        className={`mb-6 px-4 py-2 rounded ${isDarkMode ? "bg-yellow-400 text-gray-900" : "bg-gray-800 text-white"}`}
+      >
+        {isDarkMode ? "☀️ Light Mode" : "🌙 Dark Mode"}
+      </button>
 
       {isLoading ? (
-        <p className="text-gray-600 text-lg">Loading Pyodide...</p>
+        <p>Loading Pyodide...</p>
       ) : (
         <>
           <Editor
-            className="w-full h-40 p-4 mb-4 border border-gray-300 rounded-lg shadow-sm text-gray-800 bg-white font-mono"
+            height="250px"
+            language="python"
             value={code}
-            onChange={(e) => setCode(e.target.value)}
-            
+            onChange={setCode}
+            theme={isDarkMode ? "vs-dark" : "vs-light"}
+            options={{
+              fontSize: 14,
+              minimap: { enabled: false },
+              wordWrap: "on",
+              tabSize: 4,
+              automaticLayout: true,
+            }}
           />
 
           <button
             onClick={runPythonCode}
-            className="mb-6 bg-blue-600 text-white px-5 py-2 rounded-lg shadow hover:bg-blue-700"
+            className="mt-4 mb-6 bg-blue-600 text-white px-5 py-2 rounded-lg shadow hover:bg-blue-700"
           >
             ▶️ Run Code
           </button>
 
-          <h2 className="text-xl font-semibold text-gray-800">Output:</h2>
-          <pre className="bg-gray-100 p-4 rounded-lg border border-gray-300 shadow-inner whitespace-pre-wrap text-sm max-h-80 overflow-y-auto text-gray-900">
+          <h2 className="text-xl font-semibold">Output:</h2>
+          <pre className={`p-4 rounded-lg border shadow-inner whitespace-pre-wrap text-sm max-h-80 overflow-y-auto ${isDarkMode ? "bg-gray-800 border-gray-700 text-gray-100" : "bg-gray-100 border-gray-300 text-gray-900"}`}>
             {output}
           </pre>
         </>
