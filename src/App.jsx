@@ -9,41 +9,62 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const loadPy = async () => {
+    async function loadPy() {
       try {
         const py = await window.loadPyodide();
-        py.setStdout({ write: (text) => setOutput((prev) => prev + text + "\n") });
-        py.setStderr({ write: (text) => setOutput((prev) => prev + text + "\n") });
+
+        // JS function to receive output from Python
+        function printToOutput(text) {
+          setOutput((prev) => prev + text);
+        }
+
+        // Expose JS print function to Python
+        py.globals.set("printToOutput", printToOutput);
+
+        // Override sys.stdout and sys.stderr in Python
+        await py.runPythonAsync(`
+import sys
+
+class OutputCatcher:
+    def __init__(self):
+        pass
+    def write(self, s):
+        if s.strip() != '':
+            printToOutput(s)
+    def flush(self):
+        pass
+
+sys.stdout = OutputCatcher()
+sys.stderr = OutputCatcher()
+        `);
+
+        // Override input() to use window.prompt
         py.globals.set("js_prompt", (msg) => window.prompt(msg));
+        await py.runPythonAsync(`
+import builtins
+def custom_input(prompt=""):
+    return js_prompt(prompt)
+builtins.input = custom_input
+        `);
+
         setPyodide(py);
         setIsLoading(false);
       } catch (err) {
-        console.error("Failed to load Pyodide", err);
         setOutput("❌ Pyodide failed to load.");
         setIsLoading(false);
       }
-    };
+    }
     loadPy();
   }, []);
 
   const runPythonCode = async () => {
     if (!pyodide) return;
 
-    setOutput("");
+    setOutput(""); // Clear output before running code
 
     try {
-      await pyodide.runPythonAsync(`
-import sys
-import builtins
-def custom_input(prompt=""):
-    sys.stdout.flush()
-    sys.stderr.flush()
-    return js_prompt(prompt)
-builtins.input = custom_input
-sys.stdin.readline = custom_input
-      `);
-
       const result = await pyodide.runPythonAsync(code);
+
       if (result !== undefined && result !== null) {
         setOutput((prev) => prev + "\nResult: " + result.toString());
       }
@@ -77,7 +98,6 @@ sys.stdin.readline = custom_input
           <pre className="bg-gray-100 p-4 rounded-lg border border-gray-300 shadow-inner whitespace-pre-wrap text-sm max-h-80 overflow-y-auto text-gray-900">
             {output}
           </pre>
-          <p>{output}</p>
         </>
       )}
     </div>
