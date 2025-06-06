@@ -4,11 +4,11 @@ import Editor from "@monaco-editor/react";
 function App() {
   const [pyodide, setPyodide] = useState(null);
   const [code, setCode] = useState(
-    "name = input('Enter your name: ')\nprint(f'Hello, {name}!')\nprint('This is another line of output.')"
+    "print('Made By Sauravv Zure')"
   );
   const [output, setOutput] = useState("");
   const [isLoading, setIsLoading] = useState(true);
-  const [isDarkMode, setIsDarkMode] = useState(false);  // <--- Dark mode state
+  // const [isDarkMode, setIsDarkMode] = useState(false);  // <--- Dark mode state
 
   useEffect(() => {
     async function loadPy() {
@@ -71,22 +71,9 @@ builtins.input = custom_input
     }
   };
 
-  // Toggle handler for dark mode
-  const toggleDarkMode = () => {
-    setIsDarkMode((prev) => !prev);
-  };
-
   return (
-    <div className={`p-6 max-w-3xl mx-auto font-sans min-h-screen ${isDarkMode ? "bg-gray-900 text-gray-100" : "bg-gray-50 text-gray-800"}`}>
+    <div className= "p-6 max-w-3xl mx-auto font-sans min-h-screen" >
       <h1 className="text-3xl font-bold mb-6">🧪 Python Compiler</h1>
-
-      <button
-        onClick={toggleDarkMode}
-        className={`mb-6 px-4 py-2 rounded ${isDarkMode ? "bg-yellow-400 text-gray-900" : "bg-gray-800 text-white"}`}
-      >
-        {isDarkMode ? "☀️ Light Mode" : "🌙 Dark Mode"}
-      </button>
-
       {isLoading ? (
         <p>Loading Pyodide...</p>
       ) : (
@@ -96,7 +83,7 @@ builtins.input = custom_input
             language="python"
             value={code}
             onChange={setCode}
-            theme={isDarkMode ? "vs-dark" : "vs-light"}
+            theme="vs-dark"
             options={{
               fontSize: 14,
               minimap: { enabled: false },
@@ -114,7 +101,7 @@ builtins.input = custom_input
           </button>
 
           <h2 className="text-xl font-semibold">Output:</h2>
-          <pre className={`p-4 rounded-lg border shadow-inner whitespace-pre-wrap text-sm max-h-80 overflow-y-auto ${isDarkMode ? "bg-gray-800 border-gray-700 text-gray-100" : "bg-gray-100 border-gray-300 text-gray-900"}`}>
+          <pre className="p-4 rounded-lg border shadow-inner whitespace-pre-wrap text-sm max-h-80 overflow-y-auto ">
             {output}
           </pre>
         </>
