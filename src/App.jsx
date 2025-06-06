@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Editor from "@monaco-editor/react";
 
 function App() {
   const [pyodide, setPyodide] = useState(null);
@@ -81,10 +82,11 @@ builtins.input = custom_input
         <p className="text-gray-600 text-lg">Loading Pyodide...</p>
       ) : (
         <>
-          <textarea
+          <Editor
             className="w-full h-40 p-4 mb-4 border border-gray-300 rounded-lg shadow-sm text-gray-800 bg-white font-mono"
             value={code}
             onChange={(e) => setCode(e.target.value)}
+            
           />
 
           <button
