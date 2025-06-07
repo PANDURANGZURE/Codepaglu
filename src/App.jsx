@@ -1,15 +1,11 @@
-import React from 'react'
-import Python from './Pages/Python'
-import Html from './Pages/Html'
+import HtmlDocs from "./Pages/HtmlDocs";
 
 
 function App() {
+
   return (
-    <>
-    {/* <Python/> */}
-    <Html/>
-    </>
-  )
+    <HtmlDocs/>
+  );
 }
 
-export default App
+export default App;
