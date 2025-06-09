@@ -1,14 +1,18 @@
 const docs = [
+
+  //intro
   {
     id: "intro",
     title: "Introduction",
     content: (
       <>
+      <hr className="mb-2" />
        <p className="mb-4">
           Python is a high-level, interpreted programming language known for its simplicity and readability. It is one of the most widely used languages across various domains, including web development, data analysis, machine learning, automation, and more.
         </p>
 
         <h2 className="text-2xl font-semibold mt-6 mb-2">Key Features of Python</h2>
+        <hr className="mb-2" />
         <ul className="list-disc ml-6 space-y-1">
           <li>Simple and easy-to-read syntax that mimics natural language.</li>
           <li>Dynamically typed and supports multiple programming paradigms.</li>
@@ -18,6 +22,7 @@ const docs = [
         </ul>
 
         <h2 className="text-2xl font-semibold mt-6 mb-2">Why Learn Python?</h2>
+        <hr className="mb-2" />
         <ul className="list-disc ml-6 space-y-1">
           <li>Beginner-friendly and widely used in education.</li>
           <li>In-demand in careers like Data Science, AI/ML, DevOps, and Web Development.</li>
@@ -26,9 +31,11 @@ const docs = [
         </ul>
 
         <h2 className="text-2xl font-semibold mt-6 mb-2">Hello, World! in Python</h2>
+        <hr className="mb-2" />
         <p className="mb-2">Here’s how a simple Python program looks:</p>
-        <pre className="bg-gray-900 text-white p-4 rounded overflow-auto">
-          <code className="language-python">print("Hello, World!")</code>
+        <pre className=" bg-[#0f0f0f] text-white p-4 rounded overflow-auto">
+          <pre className="language-python
+          ">print("Hello, World!")</pre>
         </pre>
 
         <p className="mt-6">
@@ -36,6 +43,7 @@ const docs = [
         </p>
 
          <h2 className="text-2xl font-semibold mt-8 mb-2">Popular Applications of Python</h2>
+         <hr className="mb-2" />
         <ul className="list-disc ml-6 space-y-1">
           <li>
             <strong>Web Development:</strong> Frameworks like Django and Flask make it easy to build powerful web apps.
@@ -58,8 +66,9 @@ const docs = [
         </ul>
 
         <h2 className="text-2xl font-semibold mt-8 mb-2">Python Syntax Basics</h2>
+        <hr className="mb-2" />
         <p className="mb-2">Here’s a quick look at Python syntax compared to other languages:</p>
-        <pre className="bg-gray-900 text-white p-4 rounded overflow-auto mb-4">
+        <pre className="bg-[#0f0f0f] text-white p-4 rounded overflow-auto mb-4">
           <code className="language-python">
 {`# Python
 if age >= 18:
@@ -67,7 +76,7 @@ if age >= 18:
 `}
           </code>
         </pre>
-        <pre className="bg-gray-800 text-white p-4 rounded overflow-auto">
+        <pre className="bg-[#0f0f0f] text-white p-4 rounded overflow-auto">
           
           <code className="language-python">
 {`// Java
@@ -82,6 +91,7 @@ if (age >= 18) {
         </p>
 
         <h2 className="text-2xl font-semibold mt-8 mb-2">Real-World Companies Using Python</h2>
+        <hr className="mb-2" />
         <ul className="list-disc ml-6 space-y-1">
           <li><strong>Google:</strong> Python is one of its official server-side languages.</li>
           <li><strong>Netflix:</strong> Uses Python for data analysis, automation, and backend services.</li>
@@ -91,6 +101,7 @@ if (age >= 18) {
         </ul>
 
         <h2 className="text-2xl font-semibold mt-8 mb-2">Next Steps</h2>
+        <hr className="mb-2" />
         <p>
           To get started, install Python from <a href="https://www.python.org" className="text-blue-400 underline" target="_blank" rel="noopener noreferrer">python.org</a>, and try writing simple scripts in an editor like VS Code. As you advance, explore frameworks and libraries that align with your interests.
         </p>
@@ -101,6 +112,8 @@ if (age >= 18) {
       </>
     )
   },
+
+  //install
   {
   id: "install",
   title: "Installation",
@@ -145,17 +158,17 @@ if (age >= 18) {
 
       <h2 className="text-2xl font-semibold mb-2 mt-6">Step 4: Install Python (Linux)</h2>
       <p className="mb-2">Python is often pre-installed on Linux. To check, run:</p>
-      <pre className="bg-gray-900 text-white p-4 rounded overflow-auto mb-4">
+      <pre className="bg-[#0f0f0f] text-white p-4 rounded overflow-auto mb-4">
         <code className="language-bash">python3 --version</code>
       </pre>
       <p>If not installed, you can install it using:</p>
-      <pre className="bg-gray-800 text-white p-4 rounded overflow-auto mb-4">
+      <pre className="bg-[#0f0f0f] text-white p-4 rounded overflow-auto mb-4">
         <code className="language-bash">sudo apt install python3</code>
       </pre>
 
       <h2 className="text-2xl font-semibold mb-2 mt-6">Step 5: Verify Installation</h2>
       <p className="mb-2">Run this in your terminal or command prompt:</p>
-      <pre className="bg-gray-900 text-white p-4 rounded overflow-auto">
+      <pre className="bg-[#0f0f0f] text-white p-4 rounded overflow-auto">
         <code className="language-bash">python --version</code>
       </pre>
 
@@ -168,7 +181,7 @@ if (age >= 18) {
 
 
 
-
+//Basic Syntax
   {
   id: "syntax",
   title: "Basic Syntax",
@@ -180,13 +193,13 @@ if (age >= 18) {
 
       <h2 className="text-xl font-semibold mt-6 mb-2">1. Print Statement</h2>
       <p className="mb-2">Use the <code>print()</code> function to display output:</p>
-      <pre className="bg-gray-900 text-white p-4 rounded mb-4">
+      <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-4">
         <code className="language-python">print("Hello, Python!")</code>
       </pre>
 
       <h2 className="text-xl font-semibold mt-6 mb-2">2. Indentation</h2>
       <p className="mb-2">Indentation defines blocks of code (like inside if, for, or functions):</p>
-      <pre className="bg-gray-900 text-white p-4 rounded mb-4">
+      <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-4">
         <code className="language-python">
 {`if 5 > 2:
     print("5 is greater than 2")`}
@@ -195,7 +208,7 @@ if (age >= 18) {
 
       <h2 className="text-xl font-semibold mt-6 mb-2">3. Variables</h2>
       <p className="mb-2">You don’t need to declare the type of a variable. Python figures it out automatically:</p>
-      <pre className="bg-gray-900 text-white p-4 rounded mb-4">
+      <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-4">
         <code className="language-python">
 {`name = "Alice"
 age = 25
@@ -205,7 +218,7 @@ is_student = True`}
 
       <h2 className="text-xl font-semibold mt-6 mb-2">4. Comments</h2>
       <p className="mb-2">Use <code>#</code> to add a single-line comment:</p>
-      <pre className="bg-gray-900 text-white p-4 rounded mb-4">
+      <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-4">
         <code className="language-python">
 {`# This is a comment
 print("Python is fun!")`}
@@ -223,7 +236,7 @@ print("Python is fun!")`}
 
       <h2 className="text-xl font-semibold mt-6 mb-2">6. Type Checking</h2>
       <p className="mb-2">Use the <code>type()</code> function to check a variable’s data type:</p>
-      <pre className="bg-gray-900 text-white p-4 rounded mb-4">
+      <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-4">
         <code className="language-python">
 {`print(type("Hello"))  # Output: <class 'str'>`}
         </code>
@@ -235,6 +248,7 @@ print("Python is fun!")`}
     </>
   )
 }
+//comments
 ,{
   id: "comments",
   title: "Comments",
@@ -246,7 +260,7 @@ print("Python is fun!")`}
 
       <h2 className="text-xl font-semibold mt-6 mb-2">1. Single-line Comments</h2>
       <p className="mb-2">Use the hash symbol <code>#</code> for single-line comments:</p>
-      <pre className="bg-gray-900 text-white p-4 rounded mb-4">
+      <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-4">
         <code className="language-python">
 {`# This is a single-line comment
 print("Hello, Python!")  # This prints a message`}
@@ -257,7 +271,7 @@ print("Hello, Python!")  # This prints a message`}
       <p className="mb-2">
         Python does not have a specific multi-line comment syntax, but you can use multiple <code>#</code> symbols:
       </p>
-      <pre className="bg-gray-900 text-white p-4 rounded mb-4">
+      <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-4">
         <code className="language-python">
 {`# This is a comment
 # that spans multiple
@@ -269,7 +283,7 @@ print("Hello, Python!")  # This prints a message`}
       <p className="mb-2">
         Triple quotes (<code>"""</code> or <code>'''</code>) are used for documentation strings (docstrings) in functions or classes. These are also treated as multi-line comments when not assigned to a variable.
       </p>
-      <pre className="bg-gray-900 text-white p-4 rounded mb-4">
+      <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-4">
         <code className="language-python">
 {`"""
 This is a multi-line
@@ -281,7 +295,7 @@ print("Docstring example")`}
 
       <h2 className="text-xl font-semibold mt-6 mb-2">4. Function Docstring</h2>
       <p className="mb-2">You can add docstrings inside functions to describe what they do:</p>
-      <pre className="bg-gray-900 text-white p-4 rounded mb-4">
+      <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-4">
         <code className="language-python">
 {`def greet(name):
     """This function greets the user by name."""
@@ -335,7 +349,7 @@ print("Docstring example")`}
       </p>
 
       <h2 className="text-xl font-semibold mt-4 mb-2">6. Example of Variables</h2>
-      <pre className="bg-gray-900 text-white p-4 rounded mb-6">
+      <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-6">
         <code className="language-python">
 {`age = 20          # int
 price = 9.99        # float
@@ -360,7 +374,7 @@ print(name, "is", age, "years old.")`}
       <p className="mb-4">
         <strong>Example:</strong>
       </p>
-      <pre className="bg-gray-900 text-white p-4 rounded mb-6">
+      <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-6">
         <code className="language-python">
 {`# Global variable
 global_message = "Hello from global scope!"
@@ -394,7 +408,7 @@ print(global_message) # Output: Global message has been changed!`}
       <p className="mb-4">
         <strong>Example:</strong>
       </p>
-      <pre className="bg-gray-900 text-white p-4 rounded mb-6">
+      <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-6">
         <code className="language-python">
 {`def my_function():
     # Local variable
@@ -453,7 +467,7 @@ my_function() # Output: Inside the function, local_number is: 10
       </p>
 
       <h2 className="text-xl font-semibold mt-4 mb-2">6. Example of Data Types</h2>
-      <pre className="bg-gray-900 text-white p-4 rounded mb-6">
+      <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-6">
         <code className="language-python">
 {`age = 25           # int
 price = 9.99       # float
@@ -477,7 +491,7 @@ print(type(is_happy)) # Output: <class 'bool'>`}
       <p className="mb-4">
         <strong>Common Uses:</strong> Counting items, representing ages, scores, years, or any quantity that doesn't require fractional parts.
       </p>
-      <pre className="bg-gray-900 text-white p-4 rounded mb-6">
+      <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-6">
         <code className="language-python">
 {`# Examples of integer variables
 num_students = 30
@@ -505,7 +519,7 @@ print(f"Product result: {product_result}")`}
       <p className="mb-4">
         <strong>Common Uses:</strong> Prices, measurements, temperatures, scientific calculations, averages, or any value requiring fractional precision.
       </p>
-      <pre className="bg-gray-900 text-white p-4 rounded mb-6">
+      <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-6">
         <code className="language-python">
 {`# Examples of float variables
 temperature = 25.5
@@ -538,7 +552,7 @@ print(f"Discounted price: {discounted_price}")
       <p className="mb-4">
         <strong>Common Uses:</strong> Names, messages, addresses, sentences, paragraphs, file paths, URLs, and any other textual data.
       </p>
-      <pre className="bg-gray-900 text-white p-4 rounded mb-6">
+      <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-6">
         <code className="language-python">
 {`# Examples of string variables
 user_name = "Alice"
@@ -572,7 +586,7 @@ print(f"First character of name: {first_char}") # Output: A`}
       <p className="mb-4">
         <strong>Common Uses:</strong> Representing binary states (on/off, yes/no), results of comparisons (e.g., `x  y`), flags to indicate conditions, and controlling `if` statements and loops.
       </p>
-      <pre className="bg-gray-900 text-white p-4 rounded mb-6">
+      <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-6">
         <code className="language-python">
 {`# Examples of boolean variables
 is_active = True
@@ -627,7 +641,7 @@ if "hello":
       </p>
 
       <h3 className="text-lg font-semibold mt-3 mb-1">Example: Creating Numeric Variables</h3>
-      <pre className="bg-gray-900 text-white p-4 rounded mb-6">
+      <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-6">
         <code className="language-python">
 {`x = 1     # int
 y = 2.8   # float
@@ -644,7 +658,7 @@ print(f"z = {z}, Type: {type(z)}")`}
         The `int`, or integer, data type represents whole numbers. These can be positive, negative, or zero. A key feature of Python integers is that they have **unlimited length** (or arbitrary precision). This means the size of an integer is only limited by your system's memory, allowing you to work with extremely large numbers without concern for overflow.
       </p>
       <h3 className="text-lg font-semibold mt-3 mb-1">Example: Integers</h3>
-      <pre className="bg-gray-900 text-white p-4 rounded mb-6">
+      <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-6">
         <code className="language-python">
 {`x = 1
 y = 35656222554887711
@@ -661,7 +675,7 @@ print(f"z: {z}, Type: {type(z)}")`}
         A `float`, or "floating point number," is a number that contains one or more decimal points. These can be positive or negative. Floats are used when you need to represent real numbers, such as measurements, prices, or scientific values. Python's `float` typically uses a double-precision (64-bit) representation.
       </p>
       <h3 className="text-lg font-semibold mt-3 mb-1">Example: Basic Floats</h3>
-      <pre className="bg-gray-900 text-white p-4 rounded mb-6">
+      <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-6">
         <code className="language-python">
 {`x = 1.10
 y = 1.0  # Even though it's a whole number, the decimal makes it a float
@@ -676,7 +690,7 @@ print(f"z: {z}, Type: {type(z)}")`}
       <p className="mb-2">
         Floats can also be expressed in scientific notation, using an "e" (or "E") to indicate the power of 10. For example, `3e3` means $3 \times 10^3 = 3000$.
       </p>
-      <pre className="bg-gray-900 text-white p-4 rounded mb-6">
+      <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-6">
         <code className="language-python">
 {`x = 35e3   # 35 * 10^3 = 35000.0
 y = 12E4   # 12 * 10^4 = 120000.0
@@ -693,7 +707,7 @@ print(f"z: {z}, Type: {type(z)}")`}
         Complex numbers in Python are written with a "j" (or "J") as the imaginary part. They consist of a real part and an imaginary part, expressed as `real + imaginaryJ`.
       </p>
       <h3 className="text-lg font-semibold mt-3 mb-1">Example: Complex Numbers</h3>
-      <pre className="bg-gray-900 text-white p-4 rounded mb-6">
+      <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-6">
         <code className="language-python">
 {`x = 3 + 5j
 y = 5j    # Equivalent to 0 + 5j
@@ -710,7 +724,7 @@ print(f"z: {z}, Type: {type(z)}")`}
         You can convert (or "cast") numbers from one numeric type to another using the built-in `int()`, `float()`, and `complex()` constructor functions. This is useful when you need a value to be of a specific type for a particular operation.
       </p>
       <h3 className="text-lg font-semibold mt-3 mb-1">Example: Converting Numeric Types</h3>
-      <pre className="bg-gray-900 text-white p-4 rounded mb-6">
+      <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-6">
         <code className="language-python">
 {`x = 1     # int
 y = 2.8   # float
@@ -744,7 +758,7 @@ print(f"Converted c: {c}, Type: {type(c)}")`}
         Python itself does not have a built-in `random()` function for generating random numbers directly. Instead, it provides a powerful **`random` module** that contains various functions for generating random values. To use these functions, you must first `import` the `random` module.
       </p>
       <h3 className="text-lg font-semibold mt-3 mb-1">Example: Using the `random` Module</h3>
-      <pre className="bg-gray-900 text-white p-4 rounded mb-6">
+      <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-6">
         <code className="language-python">
 {`import random
 
@@ -793,7 +807,7 @@ print(f"Random float between 0.0 and 1.0: {random_float}")`}
         </ul>
       </p>
       <h3 className="text-lg font-semibold mt-3 mb-1">Example: Casting to `int`</h3>
-      <pre className="bg-gray-900 text-white p-4 rounded mb-6">
+      <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-6">
         <code className="language-python">
 {`x = int(1)      # x will be 1 (from an integer literal)
 y = int(2.8)    # y will be 2 (decimals are removed)
@@ -826,7 +840,7 @@ except ValueError as e:
         </ul>
       </p>
       <h3 className="text-lg font-semibold mt-3 mb-1">Example: Casting to `float`</h3>
-      <pre className="bg-gray-900 text-white p-4 rounded mb-6">
+      <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-6">
         <code className="language-python">
 {`x = float(1)      # x will be 1.0 (from an integer)
 y = float(2.8)    # y will be 2.8 (from a float literal)
@@ -851,7 +865,7 @@ except ValueError as e:
         The `str()` constructor function is used to convert a wide variety of data types into a string. This is incredibly versatile, as almost any Python object can be represented as a string.
       </p>
       <h3 className="text-lg font-semibold mt-3 mb-1">Example: Casting to `str`</h3>
-      <pre className="bg-gray-900 text-white p-4 rounded mb-6">
+      <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-6">
         <code className="language-python">
 {`x = str("s1")   # x will be 's1' (from another string)
 y = str(2)      # y will be '2' (from an integer)
@@ -883,7 +897,7 @@ print(f"b = '{b}', Type: {type(b)}")`}
 //string
 {
   id: "python-strings", // This remains the main ID for the /string route
-  title: "Python Strings", // The title for the main Strings page
+  title: "Strings", // The title for the main Strings page
   content: (
     <>
       {/* Existing Content for Python Strings */}
@@ -893,7 +907,7 @@ print(f"b = '{b}', Type: {type(b)}")`}
       </p>
 
       <h3 className="text-lg font-semibold mt-3 mb-1">Example: Basic String Definition</h3>
-      <pre className="bg-gray-900 text-white p-4 rounded mb-6">
+      <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-6">
         <code className="language-python">
 {`print("Hello, Python!")
 print('Hello, Python!')`}
@@ -904,7 +918,7 @@ print('Hello, Python!')`}
       <p className="mb-2">
         You can easily include quotation marks within a string, as long as the inner quotes do not match the type of quotes used to define the string itself.
       </p>
-      <pre className="bg-gray-900 text-white p-4 rounded mb-6">
+      <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-6">
         <code className="language-python">
 {`print("It's alright")          # Double quotes around, single quote inside
 print("He is called 'Johnny'") # Double quotes around, single quotes inside
@@ -917,7 +931,7 @@ print('She said, "Hello!"')    # Single quotes around, double quotes inside`}
         To store a string for later use, you assign it to a variable. This is done using the assignment operator (`=`), with the variable name on the left and the string literal on the right.
       </p>
       <h3 className="text-lg font-semibold mt-3 mb-1">Example: Assigning a String</h3>
-      <pre className="bg-gray-900 text-white p-4 rounded mb-6">
+      <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-6">
         <code className="language-python">
 {`my_greeting = "Welcome to Python Strings!"
 print(my_greeting)`}
@@ -929,7 +943,7 @@ print(my_greeting)`}
         When you need a string that spans multiple lines, you can use triple quotes. This can be three double quotes (`"""..."""`) or three single quotes (`'''...'''`). The line breaks and indentation within the triple quotes will be preserved in the string.
       </p>
       <h3 className="text-lg font-semibold mt-3 mb-1">Example: Using Triple Double Quotes</h3>
-      <pre className="bg-gray-900 text-white p-4 rounded mb-6">
+      <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-6">
         <code className="language-python">
 {`long_paragraph = """This is the first line.
     This is the second line,
@@ -939,7 +953,7 @@ print(long_paragraph)`}
         </code>
       </pre>
       <h3 className="text-lg font-semibold mt-3 mb-1">Example: Using Triple Single Quotes</h3>
-      <pre className="bg-gray-900 text-white p-4 rounded mb-6">
+      <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-6">
         <code className="language-python">
 {`poem_stanza = '''The quick brown fox
 jumps over the lazy dog.
@@ -959,7 +973,7 @@ print(poem_stanza)`}
         You can access individual characters or parts of a string using **square brackets `[]`** and an index. Remember that Python uses **zero-based indexing**, meaning the first character is at index `0`, the second at `1`, and so on.
       </p>
       <h3 className="text-lg font-semibold mt-3 mb-1">Example: Accessing Characters by Index</h3>
-      <pre className="bg-gray-900 text-white p-4 rounded mb-6">
+      <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-6">
         <code className="language-python">
 {`my_string = "Hello, World!"
 print(f"Character at position 0: {my_string[0]}")  # Output: H
@@ -973,7 +987,7 @@ print(f"Character at last position: {my_string[-1]}") # Output: ! (negative inde
         Since strings are iterable sequences (like arrays), you can easily iterate over their characters using a `for` loop. This allows you to process each character individually.
       </p>
       <h3 className="text-lg font-semibold mt-3 mb-1">Example: Looping Through Characters</h3>
-      <pre className="bg-gray-900 text-white p-4 rounded mb-6">
+      <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-6">
         <code className="language-python">
 {`word = "banana"
 print("Characters in 'banana':")
@@ -990,7 +1004,7 @@ for char in word:
         To determine the number of characters in a string (its length), use the built-in `len()` function.
       </p>
       <h3 className="text-lg font-semibold mt-3 mb-1">Example: Getting String Length</h3>
-      <pre className="bg-gray-900 text-white p-4 rounded mb-6">
+      <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-6">
         <code className="language-python">
 {`phrase = "Hello, World!"
 string_length = len(phrase)
@@ -1006,7 +1020,7 @@ print(f"The length of '{phrase}' is: {string_length}") # Output: 13`}
       <p className="mb-2">
         The `in` keyword returns `True` if the specified substring is found within the string, and `False` otherwise.
       </p>
-      <pre className="bg-gray-900 text-white p-4 rounded mb-6">
+      <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-6">
         <code className="language-python">
 {`main_text = "The best things in life are free!"
 is_present = "free" in main_text
@@ -1020,7 +1034,7 @@ print(f"Is 'Free' in the text? {is_present_capital}") # Output: False`}
       <p className="mb-2">
         This is particularly useful for conditional logic in your programs.
       </p>
-      <pre className="bg-gray-900 text-white p-4 rounded mb-6">
+      <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-6">
         <code className="language-python">
 {`main_text = "The best things in life are free!"
 if "free" in main_text:
@@ -1032,7 +1046,7 @@ if "free" in main_text:
       <p className="mb-2">
         The `not in` keyword returns `True` if the specified substring is **not** found within the string, and `False` if it is present.
       </p>
-      <pre className="bg-gray-900 text-white p-4 rounded mb-6">
+      <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-6">
         <code className="language-python">
 {`main_text = "The best things in life are free!"
 is_absent = "expensive" not in main_text
@@ -1040,7 +1054,7 @@ print(f"Is 'expensive' NOT in the text? {is_absent}") # Output: True`}
         </code>
       </pre>
       <h3 className="text-lg font-semibold mt-3 mb-1">Using `not in` in an `if` Statement</h3>
-      <pre className="bg-gray-900 text-white p-4 rounded mb-6">
+      <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-6">
         <code className="language-python">
 {`main_text = "The best things in life are free!"
 if "expensive" not in main_text:
@@ -1072,7 +1086,7 @@ if "expensive" not in main_text:
         <p className="mb-2">
           To slice from the beginning of the string up to (but not including) a specific index, you can omit the start index.
         </p>
-        <pre className="bg-gray-900 text-white p-4 rounded mb-6">
+        <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-6">
           <code className="language-python">
 {`b = "Hello, World!"
 print(b[2:5]) # Output: llo
@@ -1084,7 +1098,7 @@ print(b[2:5]) # Output: llo
         <p className="mb-2">
           To slice from a specific index to the end of the string, you can omit the end index.
         </p>
-        <pre className="bg-gray-900 text-white p-4 rounded mb-6">
+        <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-6">
           <code className="language-python">
 {`b = "Hello, World!"
 print(b[2:]) # Output: llo, World!
@@ -1096,7 +1110,7 @@ print(b[2:]) # Output: llo, World!
         <p className="mb-2">
           You can use negative indexes to start the slice from the end of the string.
         </p>
-        <pre className="bg-gray-900 text-white p-4 rounded mb-6">
+        <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-6">
           <code className="language-python">
 {`b = "Hello, World!"
 print(b[-5:-2]) # Output: orl
@@ -1108,7 +1122,7 @@ print(b[-5:-2]) # Output: orl
         <p className="mb-2">
           You can also specify a third parameter, `step`, which determines how many characters to skip between each selected character. The syntax is `[start:end:step]`.
         </p>
-        <pre className="bg-gray-900 text-white p-4 rounded mb-6">
+        <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-6">
           <code className="language-python">
 {`my_string = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 print(my_string[0:10:2]) # Output: ACEGI (every second character from index 0 to 9)
@@ -1129,7 +1143,7 @@ print(my_string[::-1])  # Output: ZYXWVUTSRQPONMLKJIHGFEDCBA (reverses the strin
         <p className="mb-2">
           The `upper()` method returns a new string where all characters are converted to uppercase.
         </p>
-        <pre className="bg-gray-900 text-white p-4 rounded mb-6">
+        <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-6">
           <code className="language-python">
 {`a = "Hello, World!"
 print(a.upper()) # Output: HELLO, WORLD!`}
@@ -1140,7 +1154,7 @@ print(a.upper()) # Output: HELLO, WORLD!`}
         <p className="mb-2">
           The `lower()` method returns a new string where all characters are converted to lowercase.
         </p>
-        <pre className="bg-gray-900 text-white p-4 rounded mb-6">
+        <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-6">
           <code className="language-python">
 {`a = "Hello, World!"
 print(a.lower()) # Output: hello, world!`}
@@ -1151,7 +1165,7 @@ print(a.lower()) # Output: hello, world!`}
         <p className="mb-2">
           The `strip()` method removes any whitespace (spaces, tabs, newlines) from the beginning or the end of a string.
         </p>
-        <pre className="bg-gray-900 text-white p-4 rounded mb-6">
+        <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-6">
           <code className="language-python">
 {`a = "  Hello, World!  "
 print(a.strip()) # Output: "Hello, World!"`}
@@ -1162,7 +1176,7 @@ print(a.strip()) # Output: "Hello, World!"`}
         <p className="mb-2">
           The `replace()` method replaces all occurrences of a specified substring with another substring. It returns a new string.
         </p>
-        <pre className="bg-gray-900 text-white p-4 rounded mb-6">
+        <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-6">
           <code className="language-python">
 {`a = "Hello, World!"
 print(a.replace("H", "J")) # Output: Jello, World!
@@ -1174,7 +1188,7 @@ print(a.replace("World", "Python")) # Output: Hello, Python!`}
         <p className="mb-2">
           The `split()` method splits the string into a list of substrings based on a specified separator (delimiter). If no separator is specified, it splits by any whitespace.
         </p>
-        <pre className="bg-gray-900 text-white p-4 rounded mb-6">
+        <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-6">
           <code className="language-python">
 {`a = "Hello, World!"
 print(a.split(",")) # Output: ['Hello', ' World!'] (splits at the comma)
@@ -1193,7 +1207,7 @@ print(b.split()) # Output: ['apple', 'banana', 'cherry'] (splits by whitespace)`
         </p>
 
         <h3 className="text-lg font-semibold mt-3 mb-1">Example: Using the `+` Operator</h3>
-        <pre className="bg-gray-900 text-white p-4 rounded mb-6">
+        <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-6">
           <code className="language-python">
 {`string1 = "Hello"
 string2 = "World"
@@ -1214,7 +1228,7 @@ print(message) # Output: Goodmorning (note the lack of space)`}
         <p className="mb-2">
           You can concatenate strings with variables holding string values. Remember that you can only concatenate strings with other strings. If you try to concatenate a string with a number, you'll get an error unless you first convert the number to a string using `str()`.
         </p>
-        <pre className="bg-gray-900 text-white p-4 rounded mb-6">
+        <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-6">
           <code className="language-python">
 {`name = "Alice"
 age = 30 # This is an integer
@@ -1243,7 +1257,7 @@ print("My name is " + name + " and I am " + str(age) + " years old.")
         <p className="mb-2">
           The `format()` method allows you to embed values into a string using placeholders `{}`. It provides a flexible way to format strings, allowing you to control order, alignment, and data types.
         </p>
-        <pre className="bg-gray-900 text-white p-4 rounded mb-6">
+        <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-6">
           <code className="language-python">
 {`age = 36
 txt = "My name is John, and I am {}"
@@ -1272,7 +1286,7 @@ print(my_order_named.format(qty=quantity, item_num=item_no, prc=price))
         <p className="mb-2">
           F-strings offer a more concise and readable way to embed expressions inside string literals. You prefix the string with an `f` (or `F`) and then place variable names or expressions directly inside curly braces `{}` within the string. F-strings are generally the preferred method for string formatting in modern Python.
         </p>
-        <pre className="bg-gray-900 text-white p-4 rounded mb-6">
+        <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-6">
           <code className="language-python">
 {`name = "Alice"
 age = 25
@@ -1315,7 +1329,7 @@ print(Now use your brain to print below output)
         <p className="mb-2">
           To include a double quote inside a double-quoted string, or a single quote inside a single-quoted string, you must "escape" it with a backslash.
         </p>
-        <pre className="bg-gray-900 text-white p-4 rounded mb-6">
+        <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-6">
           <code className="language-python">
 {`txt1 = "We are the so-called \\"Vikings\\" from the north."
 print(txt1) # Output: We are the so-called "Vikings" from the north.
@@ -1340,7 +1354,7 @@ print(txt2) # Output: It's a beautiful day.`}
         </ul>
 
         <h3 className="text-lg font-semibold mt-3 mb-1">Example: Using Other Escape Characters</h3>
-        <pre className="bg-gray-900 text-white p-4 rounded mb-6">
+        <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-6">
           <code className="language-python">
 {`print("Hello\\nWorld!") # New line
 # Output:
@@ -1387,7 +1401,7 @@ print("Unicode for 'A': \\u0041") # Unicode character (example)
         </ul>
 
         <h3 className="text-lg font-semibold mt-3 mb-1">Example: Using Various String Methods</h3>
-        <pre className="bg-gray-900 text-white p-4 rounded mb-6">
+        <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-6">
           <code className="language-python">
 {`text = "hello world"
 print(f"Original: '{text}'")
