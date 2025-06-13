@@ -1477,9 +1477,677 @@ print(f"Joined string: '{joined_string}'") # Output: apple, banana, cherry`}
       </div>
     </>
   )
-}
+},
 
-///
+///boolean
+{
+  id: "booleans",
+  title: " Booleans",
+  content: (
+    <>
+      <p className="mb-4">
+        In Python, <strong>Booleans</strong> are a fundamental data type that can only have one of two values: <code>True</code> or <code>False</code>. These values are used in conditions and comparisons.
+      </p>
+
+      <h2 className="text-xl font-semibold mt-6 mb-2">1. Boolean Values</h2>
+      <p className="mb-2">Boolean values are written as <code>True</code> and <code>False</code> (note the capital letters):</p>
+      <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-4">
+        <code className="language-python">
+{`x = True
+y = False
+
+print(type(x))  # Output: <class 'bool'>`}
+        </code>
+      </pre>
+
+      <h2 className="text-xl font-semibold mt-6 mb-2">2. Boolean Expressions</h2>
+      <p className="mb-2">Boolean expressions return either <code>True</code> or <code>False</code>:</p>
+      <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-4">
+        <code className="language-python">
+{`print(10 > 9)      # True
+print(10 == 9)     # False
+print(10 < 9)      # False`}
+        </code>
+      </pre>
+
+      <h2 className="text-xl font-semibold mt-6 mb-2">3. Boolean in Conditions</h2>
+      <p className="mb-2">Boolean values are commonly used in control flow:</p>
+      <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-4">
+        <code className="language-python">
+{`is_active = True
+
+if is_active:
+    print("The user is active")`}
+        </code>
+      </pre>
+
+      <h2 className="text-xl font-semibold mt-6 mb-2">4. Evaluating Values</h2>
+      <p className="mb-2">The <code>bool()</code> function can be used to evaluate any value:</p>
+      <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-4">
+        <code className="language-python">
+{`print(bool(0))        # False
+print(bool(1))        # True
+print(bool(""))       # False
+print(bool("hello"))  # True`}
+        </code>
+      </pre>
+
+      <h2 className="text-xl font-semibold mt-6 mb-2">5. Truthy and Falsy Values</h2>
+      <ul className="list-disc ml-6 mb-4">
+        <li>Falsy: <code>False</code>, <code>None</code>, <code>0</code>, <code>""</code>, <code>[]</code>, <code>{}</code>, <code>set()</code></li>
+        <li>Truthy: All other values are considered <code>True</code></li>
+      </ul>
+
+      <p className="mt-4">
+        Understanding Booleans is essential for writing conditions, loops, and logical operations in Python.
+      </p>
+    </>
+  )
+},
+
+//operator
+{
+    id: "operators",
+    title: "Operators",
+    content: (
+      <>
+        <p className="mb-4">
+          Python supports various types of operators like arithmetic, comparison, logical, assignment, and more. They are used to perform operations on variables and values.
+        </p>
+
+        <h2 className="text-xl font-semibold mt-6 mb-2">1. Arithmetic Operators</h2>
+        <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-4">
+          <code className="language-python">
+{`x = 10
+y = 3
+print(x + y)  # Addition
+print(x - y)  # Subtraction
+print(x * y)  # Multiplication
+print(x / y)  # Division
+print(x % y)  # Modulus
+print(x ** y) # Exponentiation
+print(x // y) # Floor Division`}
+          </code>
+        </pre>
+
+        <h2 className="text-xl font-semibold mt-6 mb-2">2. Comparison Operators</h2>
+        <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-4">
+          <code className="language-python">
+{`print(x == y)  # Equal
+print(x != y)  # Not equal
+print(x > y)   # Greater than
+print(x < y)   # Less than
+print(x >= y)  # Greater than or equal
+print(x <= y)  # Less than or equal`}
+          </code>
+        </pre>
+
+        <h2 className="text-xl font-semibold mt-6 mb-2">3. Logical Operators</h2>
+        <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-4">
+          <code className="language-python">
+{`a = True
+b = False
+print(a and b)
+print(a or b)
+print(not a)`}
+          </code>
+        </pre>
+
+        <h2 className="text-xl font-semibold mt-6 mb-2">4. Assignment Operators</h2>
+        <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-4">
+          <code className="language-python">
+{`x = 5
+x += 3  # x = x + 3
+x -= 2  # x = x - 2
+x *= 2  # x = x * 2
+x /= 2  # x = x / 2`}
+          </code>
+        </pre>
+
+        <p className="mt-4">
+          Operators help you build expressions and control logic in Python efficiently.
+        </p>
+      </>
+    )
+  },
+
+  //list
+{
+  id: "lists",
+  title: " Lists",
+  content: (
+    <>
+      <p className="mb-4">
+        Lists in Python are used to store multiple items in a single variable. They are ordered, changeable, and allow duplicate values.
+      </p>
+      <h2 className="text-xl font-semibold mt-6 mb-2">1. Creating a List</h2>
+      <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-4">
+        <code className="language-python">{`fruits = ["apple", "banana", "cherry"]\nprint(fruits)`}</code>
+      </pre>
+      <h2 className="text-xl font-semibold mt-6 mb-2">2. Accessing Items</h2>
+      <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-4">
+        <code className="language-python">{`print(fruits[1])  # Outputs: banana`}</code>
+      </pre>
+      <h2 className="text-xl font-semibold mt-6 mb-2">3. Changing Values</h2>
+      <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-4">
+        <code className="language-python">{`fruits[0] = "mango"\nprint(fruits)`}</code>
+      </pre>
+      <h2 className="text-xl font-semibold mt-6 mb-2">4. Loop Through List</h2>
+      <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-4">
+        <code className="language-python">{`for fruit in fruits:\n    print(fruit)`}</code>
+      </pre>
+      <h2 className="text-xl font-semibold mt-6 mb-2">5. List Methods</h2>
+      <ul className="list-disc ml-6 mb-4">
+        <li><code>append()</code> – Adds an element to the end</li>
+        <li><code>remove()</code> – Removes a specified item</li>
+        <li><code>insert()</code> – Inserts an item at a given position</li>
+        <li><code>sort()</code> – Sorts the list</li>
+      </ul>
+      <p className="mt-4">
+        Lists are one of the most versatile and frequently used data types in Python.
+      </p>
+    </>
+  )
+},
+
+// Python Tuples
+{
+  id: "tuples",
+  title: " Tuples",
+  content: (
+    <>
+      <p className="mb-4">
+        Tuples are similar to lists, but they are immutable (cannot be changed). Tuples are useful when you want to ensure data remains constant.
+      </p>
+      <h2 className="text-xl font-semibold mt-6 mb-2">1. Creating a Tuple</h2>
+      <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-4">
+        <code className="language-python">{`person = ("John", 25, "USA")\nprint(person)`}</code>
+      </pre>
+      <h2 className="text-xl font-semibold mt-6 mb-2">2. Accessing Tuple Items</h2>
+      <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-4">
+        <code className="language-python">{`print(person[0])  # Outputs: John`}</code>
+      </pre>
+      <h2 className="text-xl font-semibold mt-6 mb-2">3. Tuple Methods</h2>
+      <ul className="list-disc ml-6 mb-4">
+        <li><code>count()</code> – Returns the number of times a value appears</li>
+        <li><code>index()</code> – Returns the index of the first occurrence</li>
+      </ul>
+      <p className="mt-4">
+        Tuples are efficient and can be used as keys in dictionaries.
+      </p>
+    </>
+  )
+},
+
+// Python Sets
+{
+  id: "sets",
+  title: " Sets",
+  content: (
+    <>
+      <p className="mb-4">
+        Sets are unordered collections of unique elements. They are useful for storing non-duplicate values.
+      </p>
+      <h2 className="text-xl font-semibold mt-6 mb-2">1. Creating a Set</h2>
+      <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-4">
+        <code className="language-python">{`colors = {"red", "green", "blue"}\nprint(colors)`}</code>
+      </pre>
+      <h2 className="text-xl font-semibold mt-6 mb-2">2. Adding and Removing</h2>
+      <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-4">
+        <code className="language-python">{`colors.add("yellow")\ncolors.remove("green")`}</code>
+      </pre>
+      <h2 className="text-xl font-semibold mt-6 mb-2">3. Set Operations</h2>
+      <ul className="list-disc ml-6 mb-4">
+        <li><code>union()</code> – Combine two sets</li>
+        <li><code>intersection()</code> – Elements common in both sets</li>
+        <li><code>difference()</code> – Elements in one but not the other</li>
+      </ul>
+      <p className="mt-4">
+        Sets are great for membership tests and removing duplicates.
+      </p>
+    </>
+  )
+},
+
+//dic
+{
+  id: "dictionaries",
+  title: " Dictionaries",
+  content: (
+    <>
+      <p className="mb-4">
+        Dictionaries in Python store data in <strong>key-value pairs</strong>. They are unordered, changeable, and indexed. Each key is unique.
+      </p>
+
+      <h2 className="text-xl font-semibold mt-6 mb-2">1. Creating a Dictionary</h2>
+      <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-4">
+        <code className="language-python">
+{`student = {
+  "name": "Alice",
+  "age": 21,
+  "course": "Python"
+}`}
+        </code>
+      </pre>
+
+      <h2 className="text-xl font-semibold mt-6 mb-2">2. Accessing and Modifying</h2>
+      <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-4">
+        <code className="language-python">
+{`print(student["name"])  # Output: Alice
+student["age"] = 22`}
+        </code>
+      </pre>
+
+      <h2 className="text-xl font-semibold mt-6 mb-2">3. Dictionary Methods</h2>
+      <ul className="list-disc ml-6 mb-4">
+
+  <li className="mb-2">
+    <code>get()</code> – Safely access a value using a key. If the key doesn’t exist, it returns <code>None</code> instead of raising an error.
+    <pre className="bg-[#0f0f0f] text-white p-4 rounded mt-2">
+      <code className="language-python">
+{`student = {"name": "Alice", "age": 22}
+print(student.get("name"))    # Output: Alice
+print(student.get("grade"))   # Output: None (no error)`}
+      </code>
+    </pre>
+  </li>
+
+  <li className="mb-2">
+    <code>keys()</code> – Returns a view object with all the keys in the dictionary.
+    <pre className="bg-[#0f0f0f] text-white p-4 rounded mt-2">
+      <code className="language-python">
+{`student = {"name": "Alice", "age": 22}
+print(student.keys())  # Output: dict_keys(['name', 'age'])`}
+      </code>
+    </pre>
+  </li>
+
+  <li className="mb-2">
+    <code>values()</code> – Returns a view object with all the values in the dictionary.
+    <pre className="bg-[#0f0f0f] text-white p-4 rounded mt-2">
+      <code className="language-python">
+{`student = {"name": "Alice", "age": 22}
+print(student.values())  # Output: dict_values(['Alice', 22])`}
+      </code>
+    </pre>
+  </li>
+
+  <li className="mb-2">
+    <code>items()</code> – Returns all key-value pairs as tuples inside a view object.
+    <pre className="bg-[#0f0f0f] text-white p-4 rounded mt-2">
+      <code className="language-python">
+{`student = {"name": "Alice", "age": 22}
+print(student.items())  # Output: dict_items([('name', 'Alice'), ('age', 22)])`}
+      </code>
+    </pre>
+  </li>
+
+  <li className="mb-2">
+    <code>update()</code> – Adds new key-value pairs or updates existing ones.
+    <pre className="bg-[#0f0f0f] text-white p-4 rounded mt-2">
+      <code className="language-python">
+{`student = {"name": "Alice", "age": 22}
+student.update({"age": 23, "grade": "A"})
+print(student)  # Output: {'name': 'Alice', 'age': 23, 'grade': 'A'}`}
+      </code>
+    </pre>
+  </li>
+
+  <li className="mb-2">
+    <code>pop()</code> – Removes a key from the dictionary and returns its value.
+    <pre className="bg-[#0f0f0f] text-white p-4 rounded mt-2">
+      <code className="language-python">
+{`student = {"name": "Alice", "age": 22}
+age = student.pop("age")
+print(age)      # Output: 22
+print(student)  # Output: {'name': 'Alice'}`}
+      </code>
+    </pre>
+  </li>
+
+</ul>
+
+
+      <h2 className="text-xl font-semibold mt-6 mb-2">4. Looping Through Dictionary</h2>
+      <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-4">
+        <code className="language-python">
+{`for key, value in student.items():
+    print(key, ":", value)`}
+        </code>
+      </pre>
+
+      <p className="mt-4">Dictionaries are extremely useful when working with structured data like JSON, APIs, or tabular data.</p>
+    </>
+  )
+},
+
+//if else
+{
+  id: "ifelse",
+  title: " If...Else",
+  content: (
+    <>
+      <p className="mb-4">
+        Python uses the <code>if</code>, <code>elif</code>, and <code>else</code> statements to control the flow of execution based on conditions.
+      </p>
+
+      <h2 className="text-xl font-semibold mt-6 mb-2">1. Basic If Statement</h2>
+      <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-4">
+        <code className="language-python">
+{`x = 10
+if x > 5:
+    print("x is greater than 5")`}
+        </code>
+      </pre>
+
+      <h2 className="text-xl font-semibold mt-6 mb-2">2. If...Else</h2>
+      <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-4">
+        <code className="language-python">
+{`if x > 5:
+    print("Greater")
+else:
+    print("Smaller or Equal")`}
+        </code>
+      </pre>
+
+      <h2 className="text-xl font-semibold mt-6 mb-2">3. Elif (Else If)</h2>
+      <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-4">
+        <code className="language-python">
+{`if x == 5:
+    print("Equal to 5")
+elif x > 5:
+    print("Greater than 5")
+else:
+    print("Less than 5")`}
+        </code>
+      </pre>
+
+      <p className="mt-4">Conditions can also include logical operators like <code>and</code>, <code>or</code>, and <code>not</code>.</p>
+    </>
+  )
+},
+
+//for loop
+{
+  id: "forloops",
+  title: "Python For Loops",
+  content: (
+    <>
+      <p className="mb-4">
+        A <code>for</code> loop is used to iterate over sequences like lists, tuples, strings, and ranges.
+      </p>
+
+      <h2 className="text-xl font-semibold mt-6 mb-2">1. Iterating Over a List</h2>
+      <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-4">
+        <code className="language-python">{`fruits = ["apple", "banana", "cherry"]
+for fruit in fruits:
+    print(fruit)`}</code>
+      </pre>
+
+      <h2 className="text-xl font-semibold mt-6 mb-2">2. Using Range()</h2>
+      <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-4">
+        <code className="language-python">{`for i in range(1, 6):
+    print(i)`}</code>
+      </pre>
+
+      <h2 className="text-xl font-semibold mt-6 mb-2">3. Looping with Index</h2>
+      <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-4">
+        <code className="language-python">{`for index, value in enumerate(fruits):
+    print(index, value)`}</code>
+      </pre>
+    </>
+  )
+},
+
+
+
+
+//match
+{
+  id: "match",
+  title: " Match",
+  content: (
+    <>
+      <p className="mb-4">
+        Introduced in Python 3.10, the <code>match</code> statement provides pattern matching similar to switch-case in other languages.
+      </p>
+
+      <h2 className="text-xl font-semibold mt-6 mb-2">1. Basic Match</h2>
+      <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-4">
+        <code className="language-python">{`command = "start"
+match command:
+    case "start":
+        print("Starting...")
+    case "stop":
+        print("Stopping...")
+    case _:
+        print("Unknown command")`}</code>
+      </pre>
+
+      <h2 className="text-xl font-semibold mt-6 mb-2">2. Matching with Variables</h2>
+      <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-4">
+        <code className="language-python">{`point = (1, 2)
+match point:
+    case (0, 0):
+        print("Origin")
+    case (0, y):
+        print(f"Y={y}")
+    case (x, 0):
+        print(f"X={x}")
+    case (x, y):
+        print(f"Point at ({x}, {y})")`}</code>
+      </pre>
+    </>
+  )
+},
+
+//while oop
+{
+  id: "whileloops",
+  title: " While Loops",
+  content: (
+    <>
+      <p className="mb-4">
+        The <code>while</code> loop runs a block of code as long as the condition is true.
+      </p>
+
+      <h2 className="text-xl font-semibold mt-6 mb-2">1. Basic While Loop</h2>
+      <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-4">
+        <code className="language-python">{`i = 1
+while i <= 5:
+    print(i)
+    i += 1`}</code>
+      </pre>
+
+      <h2 className="text-xl font-semibold mt-6 mb-2">2. Using Break</h2>
+      <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-4">
+        <code className="language-python">{`i = 1
+while True:
+    print(i)
+    if i == 3:
+        break
+    i += 1`}</code>
+      </pre>
+
+      <h2 className="text-xl font-semibold mt-6 mb-2">3. Using Continue</h2>
+      <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-4">
+        <code className="language-python">{`i = 0
+while i < 5:
+    i += 1
+    if i == 3:
+        continue
+    print(i)`}</code>
+      </pre>
+    </>
+  )
+},
+
+//fun
+{
+  id: "functions",
+  title: " Functions",
+  content: (
+    <>
+      <p className="mb-4">
+        Functions are reusable blocks of code that perform a specific task. They help organize programs and avoid repetition.
+      </p>
+
+      <h2 className="text-xl font-semibold mt-6 mb-2">1. Defining a Function</h2>
+      <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-4">
+        <code className="language-python">
+{`def greet(name):
+    print(f"Hello, {name}!")`}
+        </code>
+      </pre>
+
+      <h2 className="text-xl font-semibold mt-6 mb-2">2. Calling a Function</h2>
+      <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-4">
+        <code className="language-python">greet("Alice")</code>
+      </pre>
+
+      <h2 className="text-xl font-semibold mt-6 mb-2">3. Parameters & Return</h2>
+      <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-4">
+        <code className="language-python">
+{`def add(a, b):
+    return a + b
+
+result = add(3, 5)
+print(result)`}
+        </code>
+      </pre>
+
+      <p className="mt-4">
+        Functions improve code structure, allow code reuse, and simplify debugging.
+      </p>
+    </>
+  )
+},
+
+//lambda
+{
+  id: "lambda",
+  title: " Lambda",
+  content: (
+    <>
+      <p className="mb-4">
+        A lambda function is a small anonymous function defined using the <code>lambda</code> keyword. It's often used for short operations.
+      </p>
+
+      <h2 className="text-xl font-semibold mt-6 mb-2">1. Syntax</h2>
+      <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-4">
+        <code className="language-python">lambda arguments: expression</code>
+      </pre>
+
+      <h2 className="text-xl font-semibold mt-6 mb-2">2. Example</h2>
+      <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-4">
+        <code className="language-python">
+{`add = lambda x, y: x + y
+print(add(2, 3))  # Output: 5`}
+        </code>
+      </pre>
+
+      <p className="mt-4">
+        Lambda functions are useful in <code>map()</code>, <code>filter()</code>, and <code>sorted()</code>.
+      </p>
+    </>
+  )
+},
+
+//array
+{
+  id: "arrays",
+  title: " Arrays",
+  content: (
+    <>
+      <p className="mb-4">
+        Arrays in Python can be created using the <code>array</code> module when you want efficient storage of numeric data.
+      </p>
+
+      <h2 className="text-xl font-semibold mt-6 mb-2">1. Importing the Module</h2>
+      <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-4">
+        <code className="language-python">
+{`import array
+
+arr = array.array('i', [1, 2, 3, 4])`}
+        </code>
+      </pre>
+
+      <h2 className="text-xl font-semibold mt-6 mb-2">2. Accessing and Modifying Elements</h2>
+      <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-4">
+        <code className="language-python">
+{`print(arr[0])      # Output: 1
+arr[1] = 100
+print(arr)`}
+        </code>
+      </pre>
+
+      <h2 className="text-xl font-semibold mt-6 mb-2">3. Looping and Operations</h2>
+      <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-4">
+        <code className="language-python">
+{`for item in arr:
+    print(item)`}
+        </code>
+      </pre>
+
+      <p className="mt-4">
+        Use <code>arrays</code> when you need memory-efficient numeric storage and faster computation.
+      </p>
+    </>
+  )
+},
+
+//oop
+{
+  id: "oop",
+  title: " OOP",
+  content: (
+    <>
+      <p className="mb-4">
+        Object-Oriented Programming is a paradigm that structures programs into classes and objects. It promotes code reuse and modularity.
+      </p>
+
+      <h2 className="text-xl font-semibold mt-6 mb-2">1. Creating a Class</h2>
+      <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-4">
+        <code className="language-python">
+{`class Person:
+    def __init__(self, name):
+        self.name = name
+
+    def greet(self):
+        print(f"Hello, I'm {self.name}")`}
+        </code>
+      </pre>
+
+      <h2 className="text-xl font-semibold mt-6 mb-2">2. Creating an Object</h2>
+      <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-4">
+        <code className="language-python">
+{`p = Person("Alice")
+p.greet()  # Output: Hello, I'm Alice`}
+        </code>
+      </pre>
+
+      <h2 className="text-xl font-semibold mt-6 mb-2">3. Inheritance</h2>
+      <pre className="bg-[#0f0f0f] text-white p-4 rounded mb-4">
+        <code className="language-python">
+{`class Student(Person):
+    def __init__(self, name, course):
+        super().__init__(name)
+        self.course = course
+
+s = Student("Bob", "Python")
+s.greet()`}
+        </code>
+      </pre>
+
+      <p className="mt-4">
+        Python OOP supports four pillars: <strong>Encapsulation, Inheritance, Abstraction,</strong> and <strong>Polymorphism</strong>.
+      </p>
+    </>
+  )
+},
+
+
+
 
 
 

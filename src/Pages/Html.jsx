@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import Editor from "@monaco-editor/react";
 
 function App() {
-  const [html, setHtml] = useState("<h1>Hello from HTML</h1>");
+  const [html, setHtml] = useState("<h1>Made with Efforts & ❤️ By Saurav Zure</h1>");
   const [css, setCss] = useState("h1 { color: green; }");
   const [js, setJs] = useState("console.log('Hello from JS')");
   const [srcDoc, setSrcDoc] = useState("");

@@ -3,20 +3,20 @@ import { Github, Linkedin } from 'lucide-react';
 
 function Footer() {
   return (
-    <footer className="w-full bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white py-10 shadow-inner z-50">
+    <footer className="w-full bg-gradient-to-r from-black via-[#181818] to-black text-white py-10 shadow-inner z-50">
       <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
         <div className="text-center md:text-left">
-          <h2 className="text-xl font-bold text-cyan-400">LOGO<span className="text-white">.</span></h2>
+          <h2 className="text-xl font-bold text-cyan-200">CODEPAGLU<span className="text-white">.</span></h2>
           <p className="text-sm text-gray-400 mt-2">
             Made with efforts and <span className="text-red-500">❤️</span> by <span className="text-cyan-400 font-medium">Saurav Zure</span>
           </p>
         </div>
 
         <div className="flex space-x-6">
-          <a href="https://github.com/your-github" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition">
+          <a href="https://github.com/PANDURANGZURE" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition">
             <Github size={22} />
           </a>
-          <a href="https://linkedin.com/in/your-linkedin" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition">
+          <a href="https://www.linkedin.com/in/pandurang-santosh-zure-au3112/" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition">
             <Linkedin size={22} />
           </a>
         </div>

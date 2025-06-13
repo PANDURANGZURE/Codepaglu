@@ -14,10 +14,11 @@ function HtmlDocs() {
     <>
       <div className="fixed w-full z-10 ">
         <Header />
+        <hr className=" border-t" style={{ borderColor: "rgba(255, 255, 255, 0.08)" }} />
       </div>
 
       {/* Mobile toggle button */}
-      <div className="md:hidden bg-black px-4 py-3 flex justify-between items-cente">
+      <div className="md:hidden bg-black pt-20 px-4 py-3 flex justify-between items-center ">
         <span className="text-white font-bold text-lg">Docs</span>
         <button
           onClick={() => setIsSidebarOpen(!isSidebarOpen)}
@@ -34,7 +35,7 @@ function HtmlDocs() {
           className={`
             bg-[#050505]  shadow-amber-50 text-white md:block 
             ${isSidebarOpen ? "block" : "hidden"} 
-            w-full md:w-1/4 lg:w-1/5
+            w-full md:w-1/2 lg:w-1/6
             absolute md:static z-20 md:z-0
           `}
         >
@@ -47,6 +48,13 @@ function HtmlDocs() {
             selectedId={selectedId}
           />
         </aside>
+        <div
+  className="min-h-screen w-16 bg-black relative hidden md:block"
+  style={{
+    backgroundImage:
+      "repeating-linear-gradient(135deg, rgba(255,255,255,0.08) 0, rgba(255,255,255,0.08) 1px, transparent 1px, transparent 10px)",
+  }}
+></div>
 
         {/* Content */}
         <main className="flex-1 px-4 py-6 md:px-8 overflow-auto bg-black">
@@ -54,9 +62,7 @@ function HtmlDocs() {
         </main>
       </div>
 
-      <div className="z-50">
-        <Footer />
-      </div>
+      
     </>
   );
 }
