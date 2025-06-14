@@ -44,7 +44,7 @@ function Header() {
           </a>
         </div>
       )}
-      
+      <hr className="border-t" style={{ borderColor: "rgba(255, 255, 255, 0.08)" }} />
     </header>
   );
 }

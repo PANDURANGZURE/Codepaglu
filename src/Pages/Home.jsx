@@ -8,12 +8,12 @@ function Home() {
     <>
     <div>
         <Header/>
-        <div className='h-screen '>
-          <hr className=" border-t" style={{ borderColor: "rgba(255, 255, 255, 0.08)" }} />
+        <div className=' '>
+          <hr className=" border-t " style={{ borderColor: "rgba(255, 255, 255, 0.08)" }} />
             <div className='flex'>
               
               <div
-  className="min-h-screen w-14 bg-black relative md:block hidden"
+  className="min-h-screen md:w-14 w-7 bg-black relative "
   style={{
     backgroundImage:
       "repeating-linear-gradient(135deg, rgba(255,255,255,0.08) 0, rgba(255,255,255,0.08) 1px, transparent 1px, transparent 10px)",
@@ -75,7 +75,7 @@ function Home() {
     </div>
 
     <div
-  className=" h-14  bg-black relative md:block hidden"
+  className=" h-8 bg-black relative md:h-14"
   style={{
     backgroundImage:
       "repeating-linear-gradient(135deg, rgba(255,255,255,0.08) 0, rgba(255,255,255,0.08) 1px, transparent 1px, transparent 10px)",
@@ -97,23 +97,10 @@ function Home() {
       </div>
       </div>
     </div>
-    
-    
-  
-
-  
 </div>
-  
 </div>
-
-
-
-
-
-
-
 <div
-  className="min-h-screen w-10 bg-black relative md:block hidden"
+  className="min-h-screen md:w-10 w-3 bg-black relative "
   style={{
     backgroundImage:
       "repeating-linear-gradient(135deg, rgba(255,255,255,0.08) 0, rgba(255,255,255,0.08) 1px, transparent 1px, transparent 10px)",
@@ -122,8 +109,9 @@ function Home() {
             </div>
         </div>
         
-    <Footer/>
+    
     </div>
+    <Footer/>
     </>
   )
 }
