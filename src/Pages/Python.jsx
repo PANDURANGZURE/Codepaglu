@@ -3,6 +3,8 @@ import Editor from "@monaco-editor/react";
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
 import { Play } from 'lucide-react';
+import Loader from "../Components/Loader";
+import { div } from "motion/react-client";
 
 
 function Python() {
@@ -96,20 +98,27 @@ builtins.input = custom_input
   }}
 ></div>
 <hr className="border-t" style={{ borderColor: "rgba(255, 255, 255, 0.08)" }} />
-<div className="flex md:justify-center justify-end gap-10 ">
-  <button onClick={runPythonCode} className="bg-white   py-2 rounded-3xl font-semibold cursor-pointer text-md text-black text-center w-24">
+<div className="flex md:justify-center justify-end gap-10 md:mr-5 mr-2 ">
+  
+  <button
+   disabled={isLoading}
+  className={`bg-white py-2 rounded-3xl font-semibold cursor-pointer text-md text-black text-center w-24
+    ${isLoading ? "opacity-50  bg-white   py-2 rounded-3xl font-semibold cursor-pointer text-md text-black text-center md:w-24" : ""}
+  `}
+  onClick={runPythonCode} >
     <div className="flex justify-center ">
+      
       <p>Run</p>
     <Play className="p-0.5"/> 
     
     </div></button>
-  <p className="md:block hidden">Output:</p>
+  <p className="md:block hidden text-xl mt-1 font-semibold">Output:</p>
 </div>
 <hr className="border-t" style={{ borderColor: "rgba(255, 255, 255, 0.08)" }} />
           {isLoading ? (
-            <div className="flex justify-center items-center h-96">
-              <p>Loading...</p>
-            </div>
+            <div className="flex h-1/2 justify-center items-center">
+              Interpreter is getting ready for you ....
+              </div>
           ) : (
             <div className="md:flex gap-4">
               {/* Editor Panel */}
@@ -118,7 +127,7 @@ builtins.input = custom_input
                   
                 </div>
                 <Editor
-                  className="rounded border border-gray-700 md:m-0 m-3 h-1/2 md:h-[59vh]"
+                  className="rounded border border-gray-700 md:m-0 m-3 h-[400px] md:h-[59vh]"
                   // height="60vh"
                   language="python"
                   value={code}

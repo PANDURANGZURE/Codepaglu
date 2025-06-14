@@ -27,10 +27,10 @@ function Home() {
     <div className='mt-12'>
       
       <div className='flex p-2  leading-tight tracking-tighter text-balance' >
-    <p className='mr-2  text-[#2e2d2d]' >text-8xl </p>
-    <p className='mr-2  text-[#2e2d2d]' >text-white </p>
-    <p className='mr-2  text-[#2e2d2d]' >tracking-t</p>
-    <p className='mr-2  text-[#2e2d2d]' >text-balance</p>
+    <p className='mr-2  text-[#2e2d2d]' >await </p>
+    <p className='mr-2  text-[#2e2d2d]' >import </p>
+    <p className='mr-2  text-[#2e2d2d]' >continue</p>
+    <p className='mr-2  text-[#2e2d2d]' >lambda</p>
     </div>
     <hr className=" border-t " style={{ borderColor: "rgba(255, 255, 255, 0.08)" }} />
     </div>
@@ -46,9 +46,9 @@ function Home() {
 
     <div className='mt-2'>
       <div className='flex p-2  leading-tight tracking-tighter text-balance' >
-    <p className='mr-2  text-[#2e2d2d]' >text-8xl </p>
-    <p className='mr-2  text-[#2e2d2d]' >text-white </p>
-    <p className='mr-2  text-[#2e2d2d]' >tracking-t</p>
+    <p className='mr-2  text-[#2e2d2d]' >elif </p>
+    <p className='mr-2  text-[#2e2d2d]' >finally  </p>
+    <p className='mr-2  text-[#2e2d2d]' >return</p>
     </div>
     <hr className=" border-t " style={{ borderColor: "rgba(255, 255, 255, 0.08)" }} />
     </div>

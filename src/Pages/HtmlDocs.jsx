@@ -48,13 +48,13 @@ function HtmlDocs() {
             selectedId={selectedId}
           />
         </aside>
-        <div
+        {/* <div
   className="min-h-screen w-16 bg-black relative hidden md:block"
   style={{
     backgroundImage:
       "repeating-linear-gradient(135deg, rgba(255,255,255,0.08) 0, rgba(255,255,255,0.08) 1px, transparent 1px, transparent 10px)",
   }}
-></div>
+></div> */}
 
         {/* Content */}
         <main className="flex-1 px-4 py-6 md:px-8 overflow-auto bg-black">

@@ -3,7 +3,15 @@ import { Link } from "react-router-dom";
 
 export default function Sidebar({ onSelect, selectedId }) {
   return (
-    <div className="w-64 bg-[#050505] text-white min-h-screen p-4  md:mt-16 absolute -z-10">
+    <div className="w-64 bg-[#050505] text-white min-h-screen py-4  md:mt-16 absolute -z-10 flex ">
+      <div
+  className="min-h-screen  w-10 mr-2 bg-black relative "
+  style={{
+    backgroundImage:
+      "repeating-linear-gradient(135deg, rgba(255,255,255,0.08) 0, rgba(255,255,255,0.08) 1px, transparent 1px, transparent 10px)",
+  }}
+></div>
+    <div>
       <h2 className="text-2xl font-bold mb-4">Documentation</h2>
       <ul className="space-y-2">
         
@@ -19,6 +27,7 @@ export default function Sidebar({ onSelect, selectedId }) {
           </li>
         ))}
       </ul>
+    </div>
     </div>
   );
 }
