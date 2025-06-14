@@ -88,7 +88,7 @@ Whether you're learning Python, testing a quick snippet, or just exploring, CODE
                 <img src={tail} alt="" />
                 <img src={gsap} alt="" />
                 <img src={react} alt="" />
-                <img src={monaco} alt="" />
+                <img className='w-10' src={monaco} alt="" />
                 
               </div>
             </div>
@@ -100,7 +100,7 @@ Whether you're learning Python, testing a quick snippet, or just exploring, CODE
               </div>
             </div>
             <div>
-              <p className='text-xl p-2'>Python Exwcution</p>
+              <p className='text-xl p-2'>Python Execution</p>
               <div className='flex px-2 gap-2 h-12'>
                 <img src={py} alt="" />
               </div>
