@@ -25,7 +25,7 @@ function Footer() {
         </div>
 
         <div className="text-xs text-gray-500 text-center md:text-right">
-          &copy; {new Date().getFullYear()} LOGO. All rights reserved.
+          &copy; {new Date().getFullYear()} CODEPAGLU.
         </div>
       </div>
     </footer>
