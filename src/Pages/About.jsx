@@ -17,7 +17,7 @@ function About() {
     <>
     
         <Header/>
-        <div className='w-screen text-white flex md:h-screen '>
+        <div className='w-screen text-white flex  '>
           <div className="min-h-screen md:w-14 bg-black relative w-14"
           style={{
             backgroundImage:
@@ -122,7 +122,19 @@ Whether you're learning Python, testing a quick snippet, or just exploring, CODE
         
         </div>
         
-        
+        {/* last */}
+        <div className='border border-gray-600 p-1 rounded-2xl'>
+        <div className='flex ml-1'>
+          <div className='h-3 w-3 bg-amber-50 rounded-2xl ml-2 my-2'></div>
+          <div className='h-3 w-3 bg-amber-50 rounded-2xl ml-2 my-2'></div>
+          <div className='h-3 w-3 bg-amber-50 rounded-2xl ml-2 my-2'></div>
+        </div>
+        <div className='bg-[#ffffff09] p-2 rounded-2xl'>
+          <p className='text-2xl font-bold'>About This Project</p>
+        <p className="text-white text-lg leading-relaxed"> <span className="font-bold text-cyan-200 "><Link>CodePaglu</Link></span> is a Python Interpreter that allows users to write and run Python code instantly in the browser—no setup or installation needed!
+Whether you're learning Python, testing a quick snippet, or just exploring, CODEPAGLU makes coding simple and accessible from any device.</p>
+      </div>
+      </div>
         <Footer/>
     
     </>

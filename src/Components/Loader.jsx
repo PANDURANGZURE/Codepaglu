@@ -4,6 +4,7 @@ import { gsap } from "gsap";
 const Loader = ({ onFinish }) => {
   const loaderRef = useRef();
   const textRef = useRef();
+  const barRef = useRef(); // New ref for the last sliding div
 
   useEffect(() => {
     const tl = gsap.timeline();
@@ -31,28 +32,47 @@ const Loader = ({ onFinish }) => {
         duration: 0.4,
         delay: 0.2,
       })
-      // 👉 Slide loader up from bottom to top
+      // Step 1: Slide loader off screen
       .to(loaderRef.current, {
   y: "-100%",
   duration: 1,
   ease: "power2.inOut",
-  onComplete: onFinish, // 👈 triggers setLoading(false)
-});
+}, "<") // 👈 starts at same time as next one
+
+.fromTo(
+  barRef.current,
+  { y: "100%" },
+  {
+    y: "-100%",
+    duration: 1,
+    ease: "power2.inOut",
+    onComplete: onFinish,
+  },
+  "<" // 👈 starts at same time as previous
+);
   }, [onFinish]);
 
   return (
-    <div
-      ref={loaderRef}
-      className="fixed inset-0 bg-black z-50 flex items-center justify-center "
-    >
-      <h1
-        ref={textRef}
-        className="text-6xl font-extrabold text-white tracking-tight select-none"
-        style={{ fontFamily: "'Fira Code', monospace" }}
+    <>
+      <div
+        ref={loaderRef}
+        className="fixed inset-0 bg-black z-50 flex items-center justify-center overflow-hidden"
       >
-        {"</>"}
-      </h1>
-    </div>
+        <h1
+          ref={textRef}
+          className="text-6xl font-extrabold text-white tracking-tight select-none"
+          style={{ fontFamily: "'Fira Code', monospace" }}
+        >
+          {"</>"}
+        </h1>
+      </div>
+
+      {/* Last div that slides up after loader */}
+      <div
+        ref={barRef}
+        className="fixed inset-0 bg-white z-40"
+      ></div>
+    </>
   );
 };
 
