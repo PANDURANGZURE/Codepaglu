@@ -7,8 +7,10 @@ import html from "../assets/html.png"
 import react from "../assets/react.svg"
 import tail from "../assets/tailwind.png"
 import monaco from '../assets/monaco editor.svg'
+import any from '../assets/any.png'
 import gsap from '../assets/gsap.png'
 import py from "../assets/py.png"
+import vite from '../assets/vite.png'
 import { Figma , Github,Linkedin, Instagram } from 'lucide-react';
 import { SiGithub, SiNetlify } from 'react-icons/si';
 import pfp1 from "../assets/manu.png"
@@ -20,7 +22,7 @@ function About() {
     
         <Header/>
         <div className='flex w-full '>
-          <div className="min-h-screen md:w-14 bg-black relative w-14"
+          <div className="min-h-screen md:w-14 bg-black relative w-10"
           style={{
             backgroundImage:
               "repeating-linear-gradient(135deg, rgba(255,255,255,0.08) 0, rgba(255,255,255,0.08) 1px, transparent 1px, transparent 10px)",
@@ -75,39 +77,58 @@ Whether you're learning Python, testing a quick snippet, or just exploring, CODE
           <div className='h-3 w-3 bg-amber-50 rounded-2xl ml-2 my-2'></div>
         </div>
         <div className='bg-[#ffffff09] p-2 rounded-2xl'>
-          <p className='text-2xl font-bold p-1'>Tech Stack Used</p>
+          <p className='text-2xl font-bold p-1 mb-2'>Tech Stack Used</p>
 
           <div className='p-1'>
-            <div>
+            <div className='md:flex mb-1'>
+              <div className='md:w-1/2'>
               <p className='text-xl p-2'>UI/UX</p>
               <div className='flex px-2 gap-2 h-12'>
-                <img src={canva} alt="" />
-              <Figma size={38}/>
+                <img  className='h-12' src={canva} alt="" />
+              <Figma size={40}/>
               </div>
             </div>
-            <div>
-              <p className='text-xl p-2'>Frontend </p>
-              <div className='flex px-2 gap-2 h-12'>
-                <img src={html} alt="" />
-                <img src={tail} alt="" />
-                <img src={gsap} alt="" />
-                <img src={react} alt="" />
-                <img className='w-10' src={monaco} alt="" />
-                
-              </div>
+            <div className='md:w-1/2 '>
+              <p className='text-xl p-2'>Analytics </p>
+              <div className="flex flex-wrap px-2 gap-2 h-auto">
+  <img className='w-12 h-12'  src={any} alt="" />
+</div>
+
             </div>
+            </div>
+            
             <div>
-              <p className='text-xl p-2'>Version Control & Hosting</p>
+              <div className='md:flex mb-1'>
+              <div className='md:w-1/2'>
+                <p className='text-xl p-2'>Version Control & Hosting</p>
               <div className='flex px-2 gap-2 '>
-                 <SiNetlify className=" h-10 w-12 " title="" />
+                 
                  <SiGithub  className=" h-10 w-12" title="" />
+                 <SiNetlify className=" h-10 w-12 " title="" />
               </div>
-            </div>
-            <div>
+              </div>
+
+              <div className='md:w-1/2'>
               <p className='text-xl p-2'>Python Execution</p>
               <div className='flex px-2 gap-2 h-12'>
                 <img src={py} alt="" />
               </div>
+            </div>
+            </div>
+            
+            </div>
+            <div className='mb-4'>
+              <p className='text-xl  p-2'>Frontend</p>
+              <div className='flex px-2 gap-2 h-12'>
+                
+                <img className="w-12" src={html} alt="HTML" />
+  <img className="w-12" src={tail} alt="Tailwind" />
+  <img className="w-12" src={gsap} alt="GSAP" />
+  <img className="w-12" src={react} alt="React" />
+  <img className="w-12" src={monaco} alt="Monaco Editor" />
+  
+              </div>
+              <img className="w-12  m-2 " src={vite} alt="Vite" />
             </div>
           </div>
 

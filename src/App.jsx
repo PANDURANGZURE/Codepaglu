@@ -7,6 +7,8 @@ import Home from "./Pages/Home";
 import Html from './Pages/Html';
 import About from "./Pages/About";
 import Loader from "./Components/Loader";
+import ScrollToTop from "./Components/ScrollToTop";
+
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -17,6 +19,7 @@ function App() {
       
       <div className={`${loading ? 'overflow-hidden h-screen' : ''}`}>
         <BrowserRouter>
+        <ScrollToTop/>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/interpreter" element={<Compiler />} />
