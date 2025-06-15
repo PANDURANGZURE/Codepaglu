@@ -36,7 +36,7 @@ const Loader = ({ onFinish }) => {
       .to(loaderRef.current, {
   y: "-100%",
   duration: 1,
-  ease: "power2.inOut",
+  ease: "power3.inOut",
 }, "<") // 👈 starts at same time as next one
 
 .fromTo(
@@ -70,7 +70,7 @@ const Loader = ({ onFinish }) => {
       {/* Last div that slides up after loader */}
       <div
         ref={barRef}
-        className="fixed inset-0 bg-white z-40"
+        className="fixed inset-0 bg-cyan-200 z-40"
       ></div>
     </>
   );

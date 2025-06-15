@@ -1,5 +1,5 @@
 import React from 'react';
-import { Github, Linkedin } from 'lucide-react';
+import { Github, Linkedin,Instagram } from 'lucide-react';
 
 function Footer() {
   return (
@@ -12,12 +12,15 @@ function Footer() {
           </p>
         </div>
 
-        <div className="flex space-x-6">
+        <div className="flex text-center space-x-6">
           <a href="https://github.com/PANDURANGZURE" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition">
             <Github size={22} />
           </a>
           <a href="https://www.linkedin.com/in/pandurang-santosh-zure-au3112/" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition">
             <Linkedin size={22} />
+          </a>
+          <a href="https://www.instagram.com/_anonymous_3112_/" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition">
+            <Instagram size={22} />
           </a>
         </div>
 
